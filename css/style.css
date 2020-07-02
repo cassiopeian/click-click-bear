@@ -9,9 +9,18 @@ body {
 
 /* HEADER */
 
+header {
+    background-image: url('../images/mountain-range-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 -1px;
+    padding-bottom: 5%;
+}
+
 #intro {
     display: flex;
     width: 60%;
+    padding: 5%;
 }
 .instructions {
     /* font-family: 'Raleway', sans-serif; */
