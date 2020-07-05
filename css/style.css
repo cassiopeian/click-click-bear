@@ -14,7 +14,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 -1px;
-    padding-bottom: 5%;
+    padding: 5%;
 }
 #intro-box {
     background-color: rgba(255, 255, 255, 0.4);
@@ -59,10 +59,13 @@ main {
     text-transform: uppercase;
     background-color: rgb(252, 144, 72);
     color: #ffffff;
-    padding: 1.3rem 1rem;
+    padding: 1.3rem 1.4rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+#start:hover {
+    background-color: rgb(252, 114, 72);
 }
 
 /* FOOTER */
