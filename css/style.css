@@ -53,6 +53,13 @@ main {
     width: 80%;
     margin: 3rem auto;
 }
+.bush-container {
+    width: 150px;
+}
+.bushes {
+    width: 100%;
+    height: auto;
+}
 #start {
     font-size: 1.2rem;
     font-weight: 100;
@@ -72,7 +79,7 @@ main {
 
 footer {
     width: 100%;
-    position: fixed;
+    position: relative;
     bottom: 0;
     padding: 0.5rem 1.5rem;
 }
