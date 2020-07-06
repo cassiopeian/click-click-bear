@@ -54,11 +54,12 @@ main {
     margin: 3rem auto;
 }
 .bush-container {
-    width: 150px;
+    width: 230px;
 }
 .bushes {
     width: 100%;
     height: auto;
+    cursor: pointer;
 }
 #start {
     font-size: 1.2rem;
