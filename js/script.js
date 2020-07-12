@@ -71,18 +71,21 @@ shrub1.onclick = () => {
       shrub1.src = pokedShrub1;
       chooseShrub(shrub1);
     }
+    console.log('You clicked shrub 1!');
 };
 shrub2.onclick = () => {
     if (currentlyPlaying === true && !isClicked(shrub2)) {
       shrub2.src = pokedShrub2;
       chooseShrub(shrub2);
     }
+    console.log('You clicked shrub 2!');
 };
 shrub3.onclick = () => {
     if (currentlyPlaying === true && !isClicked(shrub3)) {
       shrub3.src = pokedShrub3;
       chooseShrub(shrub3);
     }
+    console.log('You clicked shrub 3!');
 };
 
 // the startButton click event relies on the startRound function
