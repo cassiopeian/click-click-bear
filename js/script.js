@@ -67,10 +67,11 @@ const randomShrubGenerator = () => {
 
 // these click functions reveal the randomized animals if it's true that the game should still be ongoing and the door hasn't already been clicked
 shrub1.onclick = () => {
-    if (currentlyPlaying === true && !isClicked(shrub1)) {
-      shrub1.src = pokedShrub1;
-      chooseShrub(shrub1);
-    }
+    // if (currentlyPlaying === true && !isClicked(shrub1)) {
+    //   shrub1.src = pokedShrub1;
+    //   chooseShrub(shrub1);
+    // }
+    shrub1.src = pokedShrub1;
     console.log('You clicked shrub 1!');
 };
 shrub2.onclick = () => {
