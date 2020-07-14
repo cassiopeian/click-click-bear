@@ -19,37 +19,37 @@ let pokedShrub3;
 // the click functions, below, depend on this being true; the shrubs become unclickable once the gameOver function triggers the false state
 let currentlyPlaying = true;
 
-// this checks to see if the bear shrub has been clicked
-const isBear = (choice) => {
-  if (choice.src === bearSurprise) {
-    return true;
-  } else {
-    return false;
-  }
-};
-
 // this prevents players from clicking each shrub more than once
-const isClicked = (choice) => {
-  if (choice.src === undisturbedShrub) {
-    return false;
-  } else {
+let isClicked = (thingy) => {
+    if (thingy.src === undisturbedShrub) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
+// this checks to see if the bear shrub has been clicked
+let isBear = (thingy) => {
+  if (thingy.src === bearSurprise) {
     return true;
+  } else {
+    return false;
   }
 };
 
 // this decreases the number of undisturbed shrubs and checks to see if the game is over
-const chooseShrub = (choice) => {
+const chooseShrub = (thingy) => {
   numUndisturbedShrubs--;
   if (numUndisturbedShrubs === 0) {
     gameOver('win');
-  } else if (isBear(choice)) {
+  } else if (isBear(thingy)) {
     gameOver();
   } 
 };
 
 //this randomly assigns the image that will appear when the shrubs are poked
 const randomShrubGenerator = () => {
-    const shrubOption = Math.floor(Math.random() * numUndisturbedShrubs);
+    let shrubOption = Math.floor(Math.random() * numUndisturbedShrubs);
     if (shrubOption === 0) {
       pokedShrub1 = bearSurprise;
       pokedShrub2 = skunkSurprise;
@@ -68,21 +68,24 @@ const randomShrubGenerator = () => {
 // these click functions reveal the randomized animals if it's true that the game should still be ongoing and the door hasn't already been clicked
 shrub1.onclick = () => {
     // if (currentlyPlaying === true && !isClicked(shrub1)) {
-    //   shrub1.src = pokedShrub1;
-    //   chooseShrub(shrub1);
-    // }
-    shrub1.src = pokedShrub1;
+    if (currentlyPlaying === true) {
+      shrub1.src = pokedShrub1;
+      chooseShrub(shrub1);
+    }
+    // shrub1.src = pokedShrub1;
     console.log('You clicked shrub 1!');
 };
 shrub2.onclick = () => {
-    if (currentlyPlaying === true && !isClicked(shrub2)) {
+    // if (currentlyPlaying === true && !isClicked(shrub2)) {
+    if (currentlyPlaying === true) {
       shrub2.src = pokedShrub2;
       chooseShrub(shrub2);
     }
     console.log('You clicked shrub 2!');
 };
 shrub3.onclick = () => {
-    if (currentlyPlaying === true && !isClicked(shrub3)) {
+    // if (currentlyPlaying === true && !isClicked(shrub3)) {
+    if (currentlyPlaying === true) {
       shrub3.src = pokedShrub3;
       chooseShrub(shrub3);
     }
