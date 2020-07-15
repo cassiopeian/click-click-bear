@@ -53,12 +53,16 @@ main {
     width: 80%;
     margin: 3rem auto;
 }
-.bush-container {
+/* .bush-container {
     width: 230px;
 }
 .bushes {
     width: 100%;
     height: auto;
+    cursor: pointer;
+} */
+.bushes {
+    height: 230px;
     cursor: pointer;
 }
 #start {
