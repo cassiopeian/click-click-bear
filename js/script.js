@@ -96,7 +96,6 @@ const randomShrubGenerator = () => {
 shrub1.onclick = () => {
     console.log('You clicked shrub 1!');
     console.log(currentlyPlaying);
-    console.log(isClicked(shrub1));
     if (currentlyPlaying === true && !isClicked(shrub1)) {
       shrub1.src = pokedShrub1;
       chooseShrub(shrub1);
