@@ -92,3 +92,12 @@ footer {
     font-weight: 100;
     padding: 0.5rem 1.5rem;
 }
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 770px) {
+    #intro-box {
+        margin: 0 auto;
+        width: 70%;
+    }
+}
